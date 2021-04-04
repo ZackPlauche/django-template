@@ -64,9 +64,8 @@ WSGI_APPLICATION = 'config.wsgi.application'
 load_dotenv(find_dotenv())
 
 DATABASES = {
-    'default': dj_database_url.config(default='sqlite:///db.sqlite3', conn_max_age=600, ssl_require=False)
+    'default': dj_database_url.config(default='sqlite:///db.sqlite3', conn_max_age=600, ssl_require=False),
 }
-
 
 
 # Password validation
@@ -110,14 +109,6 @@ STATICFILES_DIRS = [
 ]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-
-STATIC_URL = '/static/'
-
-MEDIA_ROOT = BASE_DIR / 'media'
-
-MEDIA_URL = '/media/'
 
 
 # Custom Authentication
