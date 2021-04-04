@@ -1,7 +1,0 @@
-@mixin gradient-text($angle: to top left, $color1: #ff8a00, $color2: #e52e71) {
-  background-image: linear-gradient($angle, $color1, $color2);
-  background-image: -webkit-linear-gradient($angle, $color1, $color2);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-}
