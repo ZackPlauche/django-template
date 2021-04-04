@@ -1,0 +1,31 @@
+@use "../settings" as *;
+
+.icon {
+    color: $icons;
+    font-size: 25px;
+    transition: all 0.2s ease;
+    padding: 2px;
+
+    &.title {
+        color: $icons-title;
+    }
+
+    &.instagram:hover {
+        color: $instagram;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &.facebook:hover {
+        color: $facebook;
+    }
+
+    &.tripadvisor:hover {
+        color: $tripadvisor;
+    }
+
+    &.yelp:hover {
+        color: $yelp;
+    }
+}

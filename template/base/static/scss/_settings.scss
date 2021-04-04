@@ -1,0 +1,74 @@
+// Settings //
+@use "base/variables" as *;
+@forward "mixins";
+@forward "base/variables";
+
+// Colors
+$primary: #21abde;
+$primarydim: darken($primary, 10);
+$primarydark: darken($primary, 30);
+$secondary: #21abde;
+$secondarydim: darken($secondary, 15);
+$secondarydark: darken($secondary, 30);
+$tertiary: #21abde;
+$tertiarydim: darken($tertiary, 15);
+$tertiarydark: darken($tertiary, 30);
+
+// Viewports
+$mobile: 414px;
+$tablet: 700px;
+
+// Defaults
+$body-font: Arial;
+$body-background: white;
+$heading-font: $body-font;
+$selection-text: white;
+$selection-background: $primary;
+$links: $primary;
+$icons: black;
+$icons-title: black;
+
+// Buttons (Common)
+$button-background: white;
+$button-hover-background: black;
+$button-text: black;
+$button-hover-text: white;
+$button-border: 1px solid black;
+
+// Hero
+$hero-overlay: #00000000;
+$hero-text-color: white;
+
+// Header
+$header-position: sticky;
+
+// Navbar
+$navbar-height: 7vh;
+$navbar-mobile-height: 50px;
+$navbar-shadow: unset;
+$navbar-background: whitesmoke;
+$navbar-link-size: 18px;
+$navbar-link-weight: 400;
+$navbar-link-color: black;
+$navbar-link-hover: $primary;
+$navbar-logo-color: $navbar-link-color;
+$navbar-logo-height: $navbar-height;
+
+// Mobile Menu
+$mobile-menu-background: white;
+$mobile-navbar-link-hover: $navbar-link-hover;
+$hamburger-line-height: 3px;
+$hamburger-line-width: 30px;
+$hamburger-line-space: 10px;
+$hamburger-border-radius: 100vh;
+$hamburger-color: black;
+$hamburger-background-hover: #00000030;
+
+// Footer
+$footer-padding: 40px 0;
+$footer-background: whitesmoke;
+
+// Copyright
+$copyright-height: 40px;
+$copyright-text: black;
+$copyright-background: whitesmoke;

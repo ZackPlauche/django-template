@@ -1,0 +1,25 @@
+@use '../settings' as *;
+
+.alert {
+  @include flex();
+  margin: 10px auto;
+  width: 98%;
+  border-radius: 5px;
+  height: 50px;
+  font-size: 18px;
+  text-align: center;
+
+  &-error {
+    @extend .alert;
+    color: red;
+    background-color: rgba(red, 0.1);
+    box-shadow: 0 0 0 0.5px red;
+  }
+
+  &-good {
+    @extend .alert;
+    color: #0084ff;
+    background-color: rgba(#0084ff, 0.1);
+    box-shadow: 0 0 0 0.5px #0084ff;
+  }
+}

@@ -1,0 +1,27 @@
+/* Footer */
+@use "../settings" as *;
+
+.footer {
+
+  &-header {}
+
+  &-body {}
+
+  @media screen and (max-width: 1001px) {
+    justify-content: space-around;
+  }
+
+  &-logo {}
+
+  &-menu {}
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: $copyright-height;
+  color: $copyright-text;
+  background: $copyright-background;
+}
+

@@ -1,0 +1,31 @@
+<!-- Navbar -->
+<nav class="navbar">
+  <!-- Logo -->
+  <a class="navbar-logo" href="{% url 'home' %}">Logo</a>
+
+  <!-- Hamburger -->
+  <input class="toggle" type="checkbox">
+  <div class="hamburger">
+    <div class="hamburger-background">
+      <div class="hamburger-line"></div>
+    </div>
+  </div>
+  <ul class="navbar-links">
+
+    <!-- Links -->
+    {% if user.is_authenticated %}
+    <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+    {% else %}
+    <li><a href="{% url 'home' %}">Home</a></li>
+    <li><a href="{% url 'about' %}">About</a></li>
+    <li><a href="{% url 'contact' %}">Contact</a></li>
+    <li><a href="{% url 'login' %}">Login</a></li>
+    {% endif %}
+    {% if user.is_authenticated %}
+    <li><a href="{% url 'logout' %}">Logout</a></li>
+    <li>
+      <p>Welcome, {{ user.first_name }}!</p>
+    </li>
+    {% endif %}
+  </ul>
+</nav>

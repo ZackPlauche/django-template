@@ -1,0 +1,86 @@
+@use "../settings" as *;
+
+.form {
+  @include flex(column);
+  padding: 10px;
+  margin: 20px auto;
+  width: 95%;
+  max-width: 400px;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  color: black;
+  background-color: white;
+  font-size: 20px;
+
+  .form-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  input,
+  select {
+    display: block;
+    padding: 5px;
+    margin-top: 5px;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    font-size: 1em;
+    outline: none;
+    transition: all .2s ease;
+
+    &:hover {
+      border: 1px solid darkgrey;
+    }
+
+    &:focus {
+      border: 1px solid $primary;
+    }
+  }
+
+  ul {
+    display: none;
+  }
+
+  .helptext {
+    font-size: 0.8em;
+    color: darkgrey;
+  }
+
+  p {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  button {
+    height: 35px;
+    width: 150px;
+    border: none;
+    border-radius: 5px;
+    background-color: $primary;
+    color: white;
+    font-size: 20px;
+    
+    &:hover {
+      background-color: $primarydim;
+    }
+
+  }
+
+  &-footer {
+    padding: 10px 10px 5px;
+    &-text {
+      font-size: .8em;
+      color: grey;
+
+      a {
+        color: $primary;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+    }
+  }
+}
