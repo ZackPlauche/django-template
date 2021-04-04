@@ -1,0 +1,116 @@
+@import "config";
+@import "mixins/gradients";
+
+// Admin Header
+#header {
+  height: 50px;
+  background: black;
+  color: white;
+
+  .logo {
+    font-family: $logo-font;
+    font-size: $navbar-logo-size;
+  }
+
+  h1 {
+    color: #fff;
+  }
+}
+
+// Admin Links
+a {
+  &:link,
+  &:visited {
+    color: $admin-link-color;
+  }
+
+  &:hover {
+    color: $admin-link-color-hover;
+    text-decoration: $admin-link-text-decoration-hover;
+  }
+}
+
+.object-tools a:link,
+.object-tools a:visited {
+  background-color: #70bf2b;
+
+  &:hover,
+  &:focus {
+    background-color: darken(#70bf2b, 5);
+  }
+}
+
+// Admin Breadcrumbs
+// Breadcrumbs Bar
+div.breadcrumbs {
+  background: white;
+  color: black;
+  border-bottom: 1px solid lightgrey;
+  margin-bottom: 10px;
+
+  // Breadcrumb Link Color
+  a {
+    color: $admin-breadcrumbs-link-color;
+    text-decoration: $admin-breadcrumbs-link-decoration;
+
+    &:hover {
+      color: $admin-breadcrumbs-link-color-hover;
+      text-decoration: $admin-breadcrumbs-link-decoration-hover;
+    }
+  }
+}
+
+.toggle-nav-sidebar {
+  border-top: 1px solid #eaeaea;
+  outline: none;
+}
+
+// Model Captions
+.module h2,
+.module caption,
+inline-group h2 {
+  background: black;
+}
+
+// Admin Buttons
+.button,
+input[type="submit"],
+input[type="button"],
+.submit-row input,
+a.button {
+  background: $admin-button-background-color;
+  color: $admin-button-text-color;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: $admin-button-text-color-hover;
+    background: $admin-button-background-color-hover;
+  }
+}
+
+// Save buttons
+.button.default,
+input[type="submit"].default,
+.submit-row input.default {
+  background-color: $primary;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: darken($primary, 30);
+  }
+}
+
+#nav-sidebar {
+  &.current-model {
+    background: lighten($blue, 20);
+  }
+
+  &.current-app .section {
+    &:link,
+    &:visited {
+      color: lighten($blue, 10);
+    }
+  }
+}

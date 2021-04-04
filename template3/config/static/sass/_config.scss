@@ -1,0 +1,155 @@
+@import 'variables/colors';
+@import 'variables/fonts';
+
+// Screen Sizes
+$max: 1100px;
+$tablet: 768px;
+$mobile: 500px;
+$mobile-menu-breakpoint: 1075px;
+
+// Theme Colors
+$primary: $electricblue;
+$secondary: lime;
+$danger: red;
+$warning: gold;
+$info: darkcyan;
+$success: $grass;
+$light: whitesmoke;
+$dark: #333;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "light": $light,
+  "dark": $dark,
+  "black": black,
+  "white": white,
+  "danger": $danger,
+  "warning": $warning,
+  "info": $info,
+  "success": $success,
+);
+
+$colors: map-merge($theme-colors , $colors);
+
+// Defaults
+// Fonts
+$default-font: Arial, Helvetica, sans-serif;
+$heading-font: Arial, Helvetica, sans-serif;
+$heading-font-size: 3.5em;
+$page-heading-font: $heading-font;
+$page-heading-font-size: $heading-font-size;
+$section-heading-font: $heading-font;
+$section-heading-font-size: 2em;
+
+// HTML
+$scroll-behavior: smooth;
+
+// Links
+$link-color: $primary;
+$link-color-hover: white;
+$link-text-decoration: none;
+$link-text-decoration-hover: none;
+$link-transition: .2s ease;
+
+// Logo
+$logo-color: white;
+$logo-font: arial;
+$logo-weight: 400;
+
+// Selection
+$selection-text-color: white;
+$selection-background-color: $primary;
+
+// Admin
+// Admin Header
+$admin-header-background-color: initial;
+$admin-header-height: 50px;
+$admin-header-text-color: initial;
+
+// Admin Breadcrumbs
+$admin-breadcrumbs-bar-color: initial;
+$admin-breadcrumbs-text-color: initial;
+$admin-breadcrumbs-link-color: initial;
+$admin-breadcrumbs-link-color-hover: initial;
+$admin-breadcrumbs-link-decoration: none;
+$admin-breadcrumbs-link-decoration-hover: underline;
+
+// Admin Buttons
+$admin-button-text-color: unset;
+$admin-button-text-color-hover: unset;
+$admin-button-background-color: unset;
+$admin-button-background-color-hover: unset;
+
+// Admin Links
+$admin-link-color: $primary;
+$admin-link-color-hover: darken($primary, 20);
+$admin-link-text-decoration: none;
+$admin-link-text-decoration-hover: underline;
+
+
+// Components 
+// Navbar
+$navbar-height: 60px;
+$navbar-color: #111;
+
+// Navbar Logo
+$navbar-logo-color: white;
+$navbar-logo-color-hover: $navbar-logo-color;
+$navbar-logo-font: $default-font;
+$navbar-logo-size: 32px;
+$navbar-logo-weight: 400;
+
+// Navbar Links
+$navbar-link-color: white;
+$navbar-link-color-hover: $primary;
+$navbar-link-background-color-hover: #222;
+$navbar-link-size: 20px;
+$navbar-link-text-transform: none;
+$navbar-link-weight: 500;
+
+// Mobile Menu
+$mobile-menu-background-color: rgba(black, .8);
+
+// Mobile Menu Links
+$mobile-menu-link-background-color: unset;
+$mobile-menu-link-background-color-hover: unset;
+$mobile-menu-link-color: $navbar-link-color;
+$mobile-menu-link-color-hover: $navbar-link-color-hover; 
+$mobile-menu-link-margin: 0;
+$mobile-menu-link-padding: 20px;
+$mobile-menu-link-size: 40px;
+$mobile-menu-link-height: unset;
+$mobile-menu-link-width: unset;
+
+// Mobile Menu Icon
+$mobile-menu-icon-bar-height: 4px;
+$mobile-menu-icon-bar-width: 60%;
+$mobile-menu-icon-background-color-hover: #0003;
+$mobile-menu-icon-border-radius: 100vh;
+$mobile-menu-icon-color: white;
+$mobile-menu-icon-size: $navbar-height * .85;
+
+
+// Footer
+
+// Footer Body
+$footer-body-height: 300px;
+$footer-body-background-color: black;
+
+// Footer Logo
+$footer-logo-size: 40px;
+$footer-logo-color: $logo-color;
+$footer-logo-color-hover: $logo-color;
+
+// Footer Links
+$footer-link-color: white;
+$footer-link-color-hover: $primary;
+$footer-link-size: 24px;
+$footer-link-weight: 400;
+
+// Footer Copyright
+$copyright-height: 40px;
+$copyright-background-color: black;
+$copyright-text-color: white;
+$copyright-text-size: 18px;

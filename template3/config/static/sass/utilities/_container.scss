@@ -1,0 +1,19 @@
+@import '../config';
+
+.container {
+  max-width: $max;
+  margin: auto;
+
+  &-p {
+    padding: 0 5px;
+  }
+
+  &-wide {
+    max-width: 87%;
+    margin: auto;
+
+    @media (max-width: $mobile-menu-breakpoint) {
+      max-width: $mobile-menu-breakpoint;
+    }
+  }
+}

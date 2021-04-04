@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% load static wagtailcore_tags %}
+
+
+{% block main %}
+  <a href="{% pageurl page.get_parent %}">< Back</a>
+{% endblock %}

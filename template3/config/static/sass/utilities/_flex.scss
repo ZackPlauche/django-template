@@ -1,0 +1,61 @@
+@import '../mixins/flex';
+
+$flows: (
+  "": row,
+  "-wrap": wrap,
+  "-reverse-wrap": row-reverse wrap,
+  "-column": column,
+  "-column-reverse": column-reverse,
+);
+
+$justify-contents-row: (
+  "": center,
+  "-around": space-around,
+  "-between": space-between,
+  "-left": flex-start,
+  "-right": flex-end,
+);
+
+$justify-contents-column: (
+  "": center,
+  "-around": space-around,
+  "-between": space-between,
+  "-top": flex-start,
+  "-bottom": flex-end,
+);
+
+$align-items-row: (
+  "": center,
+  "-top": flex-start,
+  "-bottom": flex-end,
+);
+
+$align-items-column: (
+  "": center,
+  "-left": flex-start,
+  "-right": flex-end,
+);
+
+.flex {
+  @include flex();
+
+  @each $name, $flow in $flows {
+    @if $flow == column or $flow == column-reverse {
+      @each $jc-name, $jc-alignment in $justify-contents-column {
+        @each $ac-name, $ac-alignment in $align-items-column {
+          &#{$name}#{$jc-name}#{$ac-name} {
+            @include flex($flow, $jc-alignment, $ac-alignment);
+          }
+        }
+      }
+    } @else {
+      @each $jr-name, $jr-alignment in $justify-contents-row {
+        @each $ar-name, $ar-alignment in $align-items-row {
+          &#{$name}#{$jr-name}#{$ar-name} {
+            @include flex($flow, $jr-alignment, $ar-alignment);
+          }
+        }
+      }
+    }
+  }
+}
